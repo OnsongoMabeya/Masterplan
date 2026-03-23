@@ -55,7 +55,7 @@ export const TasksModel = {
       .where({ quarter_tag: quarterTag })
       .select('domain')
       .count('* as total')
-      .sum(db.raw('CASE WHEN is_done = 1 THEN 1 ELSE 0 END as done'))
+      .select(db.raw('COUNT(CASE WHEN is_done = 1 THEN 1 END) as done'))
       .groupBy('domain');
     
     return stats.map(s => ({
@@ -70,7 +70,7 @@ export const TasksModel = {
     const allTasks = await db('tasks')
       .select('quarter_tag')
       .count('* as total')
-      .sum(db.raw('CASE WHEN is_done = 1 THEN 1 ELSE 0 END as done'))
+      .select(db.raw('COUNT(CASE WHEN is_done = 1 THEN 1 END) as done'))
       .groupBy('quarter_tag');
     
     return allTasks.map(q => ({
