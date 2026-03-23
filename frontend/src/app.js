@@ -65,10 +65,22 @@ window.switchTab = async (tabName, btn) => {
   if (btn) btn.classList.add('active');
 
   const container = document.getElementById('tab-container');
+  if (!container) {
+    console.error('tab-container not found');
+    return;
+  }
   
   try {
     const module = await import(`./features/${tabName}/${tabName}.js`);
-    container.innerHTML = module.render(allTasks, allProgress);
+    
+    let content;
+    if (tabName === 'metrics' || tabName === 'quarterly') {
+      content = await module.render();
+    } else {
+      content = module.render(allTasks, allProgress);
+    }
+    
+    container.innerHTML = content;
     
     if (module.init) {
       module.init();
