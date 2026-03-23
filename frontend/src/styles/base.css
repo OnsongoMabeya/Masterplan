@@ -1,0 +1,93 @@
+:root {
+  --bg: #0a0908;
+  --surface: #111009;
+  --card: #181614;
+  --border: #272420;
+  --border2: #332f2a;
+  --text: #e8e2d8;
+  --muted: #7a7268;
+  --dim: #3d3830;
+  --faint: #1e1b17;
+  --gold: #c9a84c;
+  --gold2: #e8c96a;
+  --c1: #3ecf8e;
+  --c2: #4d9ef7;
+  --c3: #f97b6b;
+  --c4: #f4b942;
+  --c5: #b07ef8;
+  --c6: #5ec4b0;
+  --c7: #f06595;
+  --c8: #82c785;
+  --c9: #ff9f43;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Playfair Display', serif;
+  --sans: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+.c1 { color: var(--c1); }
+.bg1 { background: rgba(62, 207, 142, 0.08); }
+.bd1 { border-color: var(--c1); }
+.c2 { color: var(--c2); }
+.bg2 { background: rgba(77, 158, 247, 0.08); }
+.bd2 { border-color: var(--c2); }
+.c3 { color: var(--c3); }
+.bg3 { background: rgba(249, 123, 107, 0.08); }
+.bd3 { border-color: var(--c3); }
+.c4 { color: var(--c4); }
+.bg4 { background: rgba(244, 185, 66, 0.08); }
+.bd4 { border-color: var(--c4); }
+.c5 { color: var(--c5); }
+.bg5 { background: rgba(176, 126, 248, 0.08); }
+.bd5 { border-color: var(--c5); }
+.c6 { color: var(--c6); }
+.bg6 { background: rgba(94, 196, 176, 0.08); }
+.bd6 { border-color: var(--c6); }
+.c7 { color: var(--c7); }
+.bg7 { background: rgba(240, 101, 149, 0.08); }
+.bd7 { border-color: var(--c7); }
+.c8 { color: var(--c8); }
+.bg8 { background: rgba(130, 199, 133, 0.08); }
+.bd8 { border-color: var(--c8); }
+.c9 { color: var(--c9); }
+.bg9 { background: rgba(255, 159, 67, 0.08); }
+.bd9 { border-color: var(--c9); }
+.cg { color: var(--gold); }
+.bgg { background: rgba(201, 168, 76, 0.08); }
+.bdg { border-color: var(--gold); }
+
+@media (max-width: 700px) {
+  .tab-content {
+    padding: 24px 16px 60px;
+  }
+  .app-header,
+  .tab-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .search-wrap {
+    top: 89px;
+  }
+}
