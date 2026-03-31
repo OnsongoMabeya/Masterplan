@@ -37,6 +37,18 @@
   font-weight: 600;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
 .phase {
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -438,6 +450,20 @@
 
 .code .cmd {
   color: #4d9ef7;
+}
+
+.dom-prog-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .template {
