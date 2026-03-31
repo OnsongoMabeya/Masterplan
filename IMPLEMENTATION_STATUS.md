@@ -49,26 +49,49 @@
 
 ## 📋 REMAINING WORK
 
-### Phase 1.5: Task Seed File (~8-10 hours)
+### ✅ Phase 1.4: Domain Tab Renderers (COMPLETE)
 
-**Current**: ~136 tasks
-**Target**: ~180-200 tasks with exact HTML content
+**Status**: All 10 domain tabs built and rendering from database
 
-**Strategy**:
+**Completed**:
 
-- Extract all tasks from HTML systematically by tab
-- Include exact titles, details, tags
-- Assign correct quarter_tag based on phase
-- Use task_key format: `domain-phase-###`
+- Career: 5 phases, 21 tasks
+- Health: 3 phases, 15 tasks
+- Finance: 3 phases, 18 tasks
+- Family: 1 phase, 6 tasks
+- Faith: 1 phase, 6 tasks
+- Music: 2 phases, 8 tasks
+- Community: 1 phase, 6 tasks
+- Habits: 3 phases, 26 tasks
+- Risk: 1 phase, 4 tasks
+- Relationships: 1 phase, 4 tasks
 
-### Phase 1.6: Reviews Tab (2 hours)
+### ✅ Phase 1.5: Task Seed File (COMPLETE)
 
-- Review type selector (4 tabs)
-- Pre-filled question forms for each type
-- Past reviews list with expand/collapse
-- Questions from spec lines 976-1007
+**Status**: 112 tasks seeded successfully
 
-### Phase 1.7: Service Worker (3 hours)
+**Completed**:
+
+- All tasks extracted from HTML with exact content
+- Duplicate entries removed
+- Seed run script created with ES module support
+- Database verified and functional
+- All tasks include: task_key, domain, phase, quarter_tag, title, detail, tags
+
+### ✅ Phase 1.6: Reviews Tab (COMPLETE)
+
+**Status**: Reviews tab built with all 4 review types
+
+**Completed**:
+
+- Weekly Review: Sunday 8:00-8:30pm with 6 questions
+- Monthly Review: Last day of month, 60 minutes, all 8 domains
+- Quarterly Review: Every 3 months, 2-3 hours, 6 strategic questions
+- Annual Review: December full day, 6-8 hours with 5 annual questions
+- All phases collapsible with exact questions from HTML spec
+- Proper timing and duration guidance for each review type
+
+### Phase 1.7: Service Worker (~3 hours) - NEXT
 
 - Workbox configuration
 - CacheFirst for static assets
