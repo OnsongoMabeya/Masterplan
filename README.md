@@ -22,14 +22,32 @@ A production-grade Progressive Web App for personal life planning with 14 domain
 
 ## Features
 
+### Core Functionality
+
 - ✅ **14 Life Domains:** Career, Health, Finance, Family, Faith, Music, Community, Habits, Risk, Reviews, Relationships, Identity, Vision, Home Dashboard
-- ✅ **Task Management:** Interactive checklists with persistent state across devices
-- ✅ **Progress Tracking:** Real-time domain-level progress calculation
-- ✅ **Search:** Per-tab search with auto-expand matching phases
-- ✅ **Offline Support:** Full offline functionality with background sync
-- ✅ **PWA:** Installable on Android, iOS, and desktop
-- ✅ **PIN Auth:** Simple 4-6 digit PIN authentication
-- ✅ **Notes & Reviews:** Personal notes and periodic review entries
+- ✅ **112 Tasks:** Seeded from comprehensive 30-year masterplan with exact content
+- ✅ **Task Management:** Interactive checklists with optimistic UI and backend sync
+- ✅ **Progress Tracking:** Real-time domain-level and global progress calculation
+- ✅ **Search:** Per-tab search with phase expansion and task dimming
+- ✅ **Phase Toggles:** Collapsible phase sections with chevron rotation
+- ✅ **PIN Auth:** Simple 4-6 digit PIN authentication with bcrypt hashing
+
+### PWA Features
+
+- ✅ **Offline Support:** Full offline functionality with Workbox service worker
+- ✅ **Background Sync:** Task toggles sync when connection restored (24hr retry)
+- ✅ **Cache Strategies:** CacheFirst (static), NetworkFirst (API), StaleWhileRevalidate (HTML)
+- ✅ **Offline Banner:** Auto-detection with visual notification
+- ✅ **Install Prompt:** Custom install banner for home screen installation
+- ✅ **Offline Fallback:** Dedicated offline.html page with auto-retry
+- ✅ **Installable:** Works on Android, iOS, and desktop as standalone app
+
+### Review System
+
+- ✅ **Weekly Review:** 6 questions, Sunday 8:00-8:30pm
+- ✅ **Monthly Review:** All 8 domains audit, 60 minutes
+- ✅ **Quarterly Review:** 6 strategic questions, 2-3 hours
+- ✅ **Annual Review:** Full day reflection with 5 annual questions
 
 ## Setup Instructions
 

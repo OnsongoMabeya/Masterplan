@@ -34,8 +34,12 @@ export default defineConfig({
           }
         ]
       },
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.js',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+        navigateFallback: null,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -69,15 +73,25 @@ export default defineConfig({
             urlPattern: /\/api\/v1\/.*/i,
             handler: 'NetworkFirst',
             options: {
-              cacheName: 'api-cache',
+              cacheName: 'api-cache-v1',
               expiration: {
                 maxEntries: 50,
                 maxAgeSeconds: 60 * 5
               },
-              networkTimeoutSeconds: 10
+              networkTimeoutSeconds: 10,
+              backgroundSync: {
+                name: 'api-queue',
+                options: {
+                  maxRetentionTime: 24 * 60
+                }
+              }
             }
           }
         ]
+      },
+      devOptions: {
+        enabled: true,
+        type: 'module'
       }
     })
   ],

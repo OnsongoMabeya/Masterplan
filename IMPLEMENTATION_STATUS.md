@@ -91,24 +91,37 @@
 - All phases collapsible with exact questions from HTML spec
 - Proper timing and duration guidance for each review type
 
-### Phase 1.7: Service Worker (~3 hours) - NEXT
+### ✅ Phase 1.7: Service Worker (COMPLETE)
 
-- Workbox configuration
-- CacheFirst for static assets
-- NetworkFirst for API calls
-- Background sync for offline toggles
-- offline.html fallback page
+**Status**: Service worker implemented with Workbox
 
-### Phase 2: Missing Features (5-6 hours)
+**Completed**:
 
-1. Offline banner component (1 hour)
-2. Complete install prompt (1 hour)
-3. Client-side quarter helper (30 mins)
-4. In-memory store (30 mins)
-5. Auth CSS (1 hour)
-6. PWA CSS (1 hour)
-7. Seed run script (30 mins)
-8. Complete README (1 hour)
+- Workbox configuration with injectManifest strategy
+- CacheFirst for static assets (CSS, JS, fonts, images) - 30 day expiration
+- NetworkFirst for API calls - 5 minute expiration
+- StaleWhileRevalidate for HTML pages - 7 day expiration
+- Background sync for task toggles - 24 hour retry window
+- Offline fallback page (offline.html) with auto-retry
+- Service worker registration with auto-update
+- Offline detection with banner notification
+- Cache cleanup on activation
+
+### Phase 2: Missing Features (~3-4 hours) - IN PROGRESS
+
+**Completed**:
+
+- ✅ Offline banner component (integrated in main.js)
+- ✅ Install prompt functionality (pwa/install.js)
+- ✅ Client-side quarter helper (shared/quarter.js)
+- ✅ Seed run script (backend/database/seeds/run-seed.js)
+
+**Remaining**:
+
+1. In-memory store for offline data (30 mins)
+2. Auth CSS styling (1 hour)
+3. PWA CSS enhancements (1 hour)
+4. Complete README documentation (1 hour)
 
 ---
 
