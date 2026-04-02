@@ -35,14 +35,19 @@ export const updateProgress = async (domain, doneCount, totalCount) => {
 };
 
 export const recalculateAllProgress = async () => {
-  const taskCounts = await db('tasks')
-    .select('domain')
-    .count('* as total')
-    .sum(db.raw('CASE WHEN is_done = 1 THEN 1 ELSE 0 END as done'))
-    .groupBy('domain');
+  const taskCounts = await db.raw(`
+    SELECT 
+      domain,
+      COUNT(*) as total,
+      SUM(CASE WHEN is_done = 1 THEN 1 ELSE 0 END) as done
+    FROM tasks
+    GROUP BY domain
+  `);
 
-  for (const row of taskCounts) {
-    await updateProgress(row.domain, parseInt(row.done), parseInt(row.total));
+  const rows = taskCounts;
+
+  for (const row of rows) {
+    await updateProgress(row.domain, parseInt(row.done || 0), parseInt(row.total || 0));
   }
 
   return await getAllProgress();
